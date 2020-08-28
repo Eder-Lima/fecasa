@@ -28,12 +28,12 @@ a{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	opacity: 0;
 	cursor: pointer;
+	opacity: 0.5;
 }
 
 .container_voltar_topo:hover{
-	opacity: 0.5;
+	background-color: #911b07;
 }
 
 .voltar_topo{
@@ -42,10 +42,11 @@ a{
 	width: 20px;
 	height: 20px;
 	transform: rotate(135deg);
-	position: fixed;
-	right: 35px;
-	bottom: 50px;
-	cursor: pointer;
+}
+
+.container_voltar_topo:hover .voltar_topo{
+	border-left: 2px solid #fff;
+	border-bottom: 2px solid #fff;
 }
 
 
@@ -347,6 +348,16 @@ header.mobile .redes_sociais a{
 
 
 
+#artigo{
+	display: flex;
+	justify-content: center;
+}
+
+
+
+
+
+
 footer{
 	display: flex;
 	align-items: center;
@@ -398,14 +409,6 @@ footer .rodape{
 		display: block;
 	}
 
-	#slider .container{
-		justify-content: center;
-	}
-
-	#slider .previous, .next{
-		display: none;
-	}
-
 	footer .top{
 		display: flex;
 		flex-direction: column;
@@ -421,27 +424,6 @@ footer .rodape{
 
 	header.mobile{
 		display: block;
-	}
-
-	header.mobile .menu_mobile{
-		
-	}
-
-	header.mobile .redes_sociais .top{
-		display: none;
-	}
-
-	header.mobile .redes_sociais .bottom{
-		display: flex;
-		flex-direction: column;
-	}
-
-	#slider .container{
-		justify-content: center;
-	}
-
-	#slider .previous, .next{
-		display: none;
 	}
 
 	footer .top{

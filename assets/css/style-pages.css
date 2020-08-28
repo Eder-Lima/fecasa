@@ -18,6 +18,37 @@ a{
 	color: #000;
 }
 
+.container_voltar_topo{
+	width: 50px;
+	height: 80px;
+	background-color: gray;
+	position: fixed;
+	right: 20px;
+	bottom: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+.container_voltar_topo:hover{
+	background-color: #911b07;
+}
+
+.voltar_topo{
+	border-left: 2px solid #911b07;
+	border-bottom: 2px solid #911b07;
+	width: 20px;
+	height: 20px;
+	transform: rotate(135deg);
+}
+
+.container_voltar_topo:hover .voltar_topo{
+	border-left: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+}
+
 
 
 
@@ -40,10 +71,6 @@ header .top{
 }
 
 /*Logomarca*/
-header .top .logomarca{
-
-}
-
 .logomarca a{
 	display: block;
 }
@@ -58,16 +85,16 @@ header .top .contatos{
 	align-items: center;
 }
 
-.contatos .redes_sociais{
+.redes_sociais{
 	display: flex;
 	align-items: center;
 }
 
-.contatos .redes_sociais p{
+.redes_sociais p{
 	font-size: 18px;
 }
 
-.contatos .redes_sociais img{
+.redes_sociais img{
 	width: 40px;
 	height: 40px;
 	margin-left: 20px;
@@ -109,6 +136,7 @@ nav ul li:hover{
 .menu_sobrepor:hover ul{
 	display: block;
 }
+
 .menu_sobrepor ul li{
 	margin-left: 5px;
 	margin-top: 10px;
@@ -143,42 +171,50 @@ header.mobile{
 header.mobile .container{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
+	margin: 0;
+	padding: 10px;
 }
 
+/*Memu Mobile*/
 header.mobile .menu_mobile{
-	max-width: 100px;
-	width: 15%;
+	width: 60%;
 }
 
 .menu_mobile .listras{
 	height: 10px;
+	max-width: 90px;
 	width: 100%;
 	background-color: #911b07;
 	margin-bottom: 5px;
 	border-radius: 3px;
 }
+/*Fim Menu Mobile*/
+
+/*Logomarca*/
+header.mobile .logomarca{
+	width: 100%;
+}
 
 header.mobile .logomarca img{
 	height: 100px;
 }
+/*Fim Logomarca*/
 
+/*Redes Sociais*/
 header.mobile .redes_sociais{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	margin-right: 30px;
-	justify-content: center;
+	position: fixed;
+	right: 10px;
+	top: 15px;
 }
 
-header.mobile .top{
-	margin-bottom: 20px;
+header.mobile .redes_sociais a{
+	margin-bottom: 10px;
 }
-
-header.mobile .top .redes_sociais p{
-	font-size: 18px;
-}
+/*Fim Redes Sociais*/
 
 
 
@@ -312,44 +348,25 @@ header.mobile .top .redes_sociais p{
 
 
 
-#artigo{
-	display: flex;
-	justify-content: center;
-}
-
-#artigo article{
-	text-align: center;
-}
-
-
-
-
-
-
 footer{
 	display: flex;
-	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 footer .container{
 	border-top: 2px solid  #911b07;
-	padding: 0 20px 0 20px;
 }
 
 footer .top{
 	display: flex;
 	justify-content: space-between;
+	padding: 0 20px 0 20px;
 }
 
 footer h3{
 	margin-top: 30px;
 	margin-bottom: 30px;
-}
-
-footer .bottom{
-	display: flex;
-	justify-content: center;
-	margin-top: 40px;
 }
 
 footer .top p{
@@ -365,6 +382,8 @@ footer .rodape{
 	text-align: center;
 	background-color: #d0e7f5;
 	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
 
 
@@ -378,14 +397,6 @@ footer .rodape{
 
 	header.mobile{
 		display: block;
-	}
-
-	#slider .container{
-		justify-content: center;
-	}
-
-	#slider .previous, .next{
-		display: none;
 	}
 
 	footer .top{
@@ -403,27 +414,6 @@ footer .rodape{
 
 	header.mobile{
 		display: block;
-	}
-
-	header.mobile .menu_mobile{
-		
-	}
-
-	header.mobile .redes_sociais .top{
-		display: none;
-	}
-
-	header.mobile .redes_sociais .bottom{
-		display: flex;
-		flex-direction: column;
-	}
-
-	#slider .container{
-		justify-content: center;
-	}
-
-	#slider .previous, .next{
-		display: none;
 	}
 
 	footer .top{
