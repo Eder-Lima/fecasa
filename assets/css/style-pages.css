@@ -1,0 +1,435 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #e3f0f8;
+}
+
+.container{
+	max-width: 1200px;
+	width: 100%;
+	margin: 20px;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+
+
+
+
+
+header{
+	display: flex;
+	justify-content: center;
+}
+
+header .container{
+	display: flex;
+	flex-direction: column;
+	border-bottom: 2px solid #911b07;
+}
+
+header .top{
+	display: flex;
+	justify-content: space-between;
+}
+
+/*Logomarca*/
+header .top .logomarca{
+
+}
+
+.logomarca a{
+	display: block;
+}
+
+.logomarca a img{
+	height: 200px;
+}
+
+/*Contatos*/
+header .top .contatos{
+	display: flex;
+	align-items: center;
+}
+
+.contatos .redes_sociais{
+	display: flex;
+	align-items: center;
+}
+
+.contatos .redes_sociais p{
+	font-size: 18px;
+}
+
+.contatos .redes_sociais img{
+	width: 40px;
+	height: 40px;
+	margin-left: 20px;
+	display: block;
+}
+
+/*Menu*/
+header nav{
+	
+}
+
+nav ul{
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 10px 0 10px;
+}
+
+nav ul li{
+	font-size: 22px;
+	margin: 0 10px 0 10px;
+	margin-bottom: 20px;
+}
+
+nav ul li:hover{
+	border-bottom: 3px solid #911b07;
+	color: #911b07;
+	margin-bottom: 17px;
+}
+
+.menu_sobrepor ul{
+	flex-direction: column;
+	position: absolute;
+	display: none;
+	padding: 0;
+	background-color: #d0e7f5;
+}
+
+.menu_sobrepor:hover ul{
+	display: block;
+}
+.menu_sobrepor ul li{
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+
+
+.seta{
+	width: 10px;
+	height: 10px;
+	border-bottom: 2px solid #000;
+	border-left: 2px solid #000;
+	transform: rotate(-45deg);
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+li:hover .seta{
+	border-bottom: 2px solid #911b07;
+	border-left: 2px solid #911b07;
+}
+
+
+
+
+
+/*Cabeçalho Mobile*/
+header.mobile{
+	display: none;
+}
+
+header.mobile .container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header.mobile .menu_mobile{
+	max-width: 100px;
+	width: 15%;
+}
+
+.menu_mobile .listras{
+	height: 10px;
+	width: 100%;
+	background-color: #911b07;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
+
+header.mobile .logomarca img{
+	height: 100px;
+}
+
+header.mobile .redes_sociais{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-right: 30px;
+	justify-content: center;
+}
+
+header.mobile .top{
+	margin-bottom: 20px;
+}
+
+header.mobile .top .redes_sociais p{
+	font-size: 18px;
+}
+
+
+
+
+
+
+/*Slider*/
+#slider{
+	display: flex;
+	justify-content: center;
+}
+
+#slider .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#slider .previous_next{
+	display: block;
+	width: 80px;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+
+#slider .previous_next:hover{
+	opacity: 0.8;
+	background-color: #911b07;
+	transition: 0.5s;
+}
+
+#slider .previous, .next{
+	border-left: 2px solid #000;
+	border-bottom: 2px solid #000;
+	width: 30px;
+	height: 30px;
+	transform: rotate(45deg);
+}
+
+.next{
+	transform: rotate(225deg);
+}
+
+#slider .container2{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#slider img{
+	width: 100%;
+}
+
+#slider .container:hover img{
+
+}
+
+#slider .text_slider{
+	text-align: center;
+	margin-top: 10px;
+	color: #054988;
+}
+
+
+
+
+
+/*Galeria de Fotos*/
+#galeria_fotos{
+	display: flex;
+	justify-content: center;
+}
+
+#galeria_fotos .container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#galeria_fotos .widget{
+	flex: 1;
+	min-width: 320px;
+	max-width: 320px;
+	margin-bottom: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	overflow: hidden;
+	padding: 10px;
+}
+
+#galeria_fotos .widget .moldura_foto{
+	height: 200px;
+	background-color: gray;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 5px solid #911b07;
+	border-radius: 5px;
+}
+
+#galeria_fotos .widget:hover .moldura_foto{
+	transition: 0.5s;
+	transform: scale(1.05);
+}
+
+#galeria_fotos .moldura_foto img{
+	width: 100%;
+	height: 100%;
+}
+
+#galeria_fotos .widget .description{
+	text-align: center;
+}
+
+#galeria_fotos .description h3{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #054988;
+}
+
+#galeria_fotos .description p{
+	text-align: left;
+	color: #054988;
+}
+
+
+
+
+
+
+#artigo{
+	display: flex;
+	justify-content: center;
+}
+
+#artigo article{
+	text-align: center;
+}
+
+
+
+
+
+
+footer{
+	display: flex;
+	justify-content: center;
+}
+
+footer .container{
+	border-top: 2px solid  #911b07;
+	padding: 0 20px 0 20px;
+}
+
+footer .top{
+	display: flex;
+	justify-content: space-between;
+}
+
+footer h3{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+footer .bottom{
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+footer .top p{
+	margin-bottom: 5px;
+}
+
+footer .top span{
+	display: block;
+	margin-top: 20px;
+}
+
+footer .rodape{
+	text-align: center;
+	background-color: #d0e7f5;
+	width: 100%;
+}
+
+
+
+
+
+@media only screen and (min-width: 400px) and (max-width: 999px){
+	header{
+		display: none;
+	}
+
+	header.mobile{
+		display: block;
+	}
+
+	#slider .container{
+		justify-content: center;
+	}
+
+	#slider .previous, .next{
+		display: none;
+	}
+
+	footer .top{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+@media only screen and (max-width: 399px){
+	header{
+		display: none;
+	}
+
+	header.mobile{
+		display: block;
+	}
+
+	header.mobile .menu_mobile{
+		
+	}
+
+	header.mobile .redes_sociais .top{
+		display: none;
+	}
+
+	header.mobile .redes_sociais .bottom{
+		display: flex;
+		flex-direction: column;
+	}
+
+	#slider .container{
+		justify-content: center;
+	}
+
+	#slider .previous, .next{
+		display: none;
+	}
+
+	footer .top{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
